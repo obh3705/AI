@@ -1,0 +1,38 @@
+Numpy_ex.py
+
+	Numpy는 N차원 배열 객체와 함께 이러한 배열들을 조작하기 위한 다양한 함수 제공.
+		과학적 분야의 연산을 위한 포괄적인 프레임워크.
+
+	#1
+		partially initialized module 'numpy' has no attribute 'random' (most likely due to a circular import)
+		이 에러는 import 한 모듈과 파일 이름이 같아서 생기는 오류이다.
+		파일 이름 변경으로 해결
+
+	이 코드를 실행하면 손실이 점점 줄어드는 것을 알 수 있다.
+
+	역전파는 입력이 신경망의 가중치와 곱하고 더하는 과정을 반복하면 입력의 결과 값인 출력이 나오는데 출력은 학습 데이터에서 주어진 원하는 출력과 다르다. 결국 신경망에서는 오차가 방생하며, 오차에 비례하여 출력층의 가중치를 갱신하고 은닉층의 가중치를 갱신한다 가중치를 갱신하는 방향은 신경망의 처리 방향과는 반대이다.
+
+PyTorch:Tensors
+
+	Numpy는 GPU를 사용하여 수치 연산을 가속화 할 수는 없음.
+	현대의 심층 신경망에서 GPU는 종종 50배 또는 그 이상의 속도 향상을 제공하기 때문에 Numpy로 현대의 딥러닝에는 충분하지 않음.
+
+	Tensor는 개념적으로 Numpy 배열과 동일
+	PyTorch Tensor는 GPU를 활용하여 수치 연산을 가속화 할 수 있음.
+
+	#1
+		ModuleNotFoundError: No module named 'torch'
+		torch는 pip install torch로 설치할 수 없다.
+
+		설치하기 위해서 torch 홈페이지의 pip 패키지를 이용해 
+		pip install torch===1.6.0 torchvision===0.7.0 -f https://download.pytorch.org/whl/torch_stable.html 으로 설치할 수 있다.
+
+		또는 conda install pytorch torchvision -c pytorch 으로 설치할 수 있다.
+
+	#2
+		AssertionError: Found no NVIDIA driver on your system. Please check that you
+		have an NVIDIA GPU and installed a driver from
+		http://www.nvidia.com/Download/index.aspx
+
+		지금 공부하는 노트북에 NVIDIA 그래픽카드가 없어 생기는 문제인 것 같다.
+		데스크탑에서 다시 한번 실행해봐야할 것 같다.

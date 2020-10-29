@@ -1,0 +1,14 @@
+autograd
+
+	자동 미분을 사용하여 신경망에서 역전파 단계의 연산을 자동화 할 수 있다.
+	autograd를 사용할 때, 신경망의 순전파 단계는 연산 그래프를 정의하게 된다.
+	이 그래프의 노드는 Tensor, 엣지는 입력 Tensor로부터 출력 Tensor를 만들어내는 함수.
+
+새 autograd 함수 정의하기
+
+	forward 함수는 입력 Tensor로부터 출력 Tensor를 계산한다. backward 함수는 어떤 스칼라 값에 대한 출력 Tensor의 변화도를 전달받고, 동일한 스칼라 값에 대한 입력 Tensor의 변화도를 계산한다.
+
+nn 모듈
+
+	nn 패키지는 신경망 계층들과 거의 동일한 Module의 집합을 정의한다.
+	Module은 입력 Tensor를 받고 출력 Tensor를 계산하는 한편, 학습 가능한 매개변수를 갖는 Tensor 같은 내부 상태를 갖는다.
